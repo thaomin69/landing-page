@@ -1,0 +1,328 @@
+p {
+    font-family: $font-text;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    line-height: 30px;
+    color: $color-gray;
+    margin-bottom: 26px;
+    margin-top: 0;
+
+    b {
+        color: $color-dark;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+        line-height: 26px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    font-family: $font-display;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 70px;
+    color: $color-primary;
+    margin-top: 0;
+    margin-bottom: 55px;
+
+    small {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: $color-second;
+        display: block;
+    }
+
+    &.bordered {
+        margin-bottom: 30px;
+    }
+
+    &.text-content {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        letter-spacing: 0.09em;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+        font-size: 42px;
+        line-height: 50px;
+    }
+}
+
+.border-text {
+    width: 70px;
+    height: 4px;
+    background-color: $color-second;
+    margin-bottom: 40px;
+
+    &._white {
+        background-color: white;
+    }
+}
+
+//Link
+a {
+    color: $color-link;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.list {
+    padding: 0 0 0 16px;
+    margin: 0;
+
+    li {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+}
+
+//transformação da fonte
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.capitalize {
+    text-transform: capitalize !important;
+}
+
+.transform-none {
+    text-transform: none !important;
+}
+
+.decoration-none {
+    text-decoration: none !important;
+}
+
+// alinhamento do texto
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-centered {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+// Weight
+.text-light {
+    font-weight: 300 !important;
+}
+
+.text-normal {
+    font-weight: 400 !important;
+}
+
+.text-semibold {
+    font-weight: 500 !important;
+}
+
+.text-bold {
+    font-weight: 700 !important;
+}
+
+// cores do texto
+.text-lgray {
+    color: $color-lgray !important;
+}
+
+.text-gray {
+    color: $color-gray !important;
+}
+
+.text-dark {
+    color: $color-dark !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.text-primary {
+    color: $color-primary !important;
+}
+
+.text-second {
+    color: $color-second !important;
+}
+
+.text-second-dark {
+    color: $color-primary !important;
+}
+
+.text-link {
+    color: $color-link !important;
+}
+
+.text-alert {
+    color: $color-alert !important;
+}
+
+.text-danger {
+    color: $color-danger !important;
+}
+
+.text-success {
+    color: $color-success !important;
+}
+
+// fontes do texto
+.font-display {
+    font-family: $font-display !important;
+}
+
+.font-text {
+    font-family: $font-text !important;
+}
+
+.text-italic {
+    font-style: italic !important;
+}
+
+// texto colorido
+.titulo-gaslur-home {
+    font-family: $font-text1;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.texto-home-colorido {
+    font-family: $font-text1;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 1.5px solid #9B51E0
+}
+
+// título
+.t1 {
+    font-family: $font-text1;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 82px;
+    letter-spacing: -2px;
+}
+
+.t2 {
+    font-family: $font-text1;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -1px;
+}
+
+.t3 {
+    font-family: $font-text1;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.t4 {
+    font-family: $font-text1;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+//texto normal
+.p1 {
+    font-family: $font-text1;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+}
+
+.p2 {
+    font-family: $font-text1;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.p3 {
+    font-family: $font-text1;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.p4 {
+    font-family: $font-text1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.p5 {
+    font-family: $font-text1;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.p6 {
+    font-family: $font-text1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.p7 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

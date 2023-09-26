@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: $font-text;
+    margin: 0;
+    padding: 0;
+    color: $color-dark;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height: 100vh;
+        background-color: white;
+        z-index: 9999;
+        transform: translate3d(-80vw, 0, 0);
+        transition: transform 0.33s;
+        pointer-events: none;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(30, 31, 38, 0.5);
+        z-index: 9999;
+        transform: translate3d(-100vw, 0, 0);
+        pointer-events: none;
+    }
+
+    &.overflow-hidden {
+        overflow: hidden;
+
+        &:after {
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.37s;
+        }
+
+        &:before {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: $font-text;
+}
+
+img {
+    max-width: 100%;
+}
+
+.section1 {
+    @media screen and (min-width: $screen-lg) {
+        margin-top: 180px;
+    }
+
+    @media screen and (max-width: $screen-lg) {
+        margin-top: 60px;
+    }
+
+    .botoessection1 {
+        @media screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 60px;
+        }
+    }
+
+    .botaosection1a {
+        background: linear-gradient(103.91deg,
+                #9b51e0 21.01%,
+                rgba(48, 129, 237, 0.8) 100%);
+        border: 1px solid #9b51e0;
+        border-radius: 16px;
+        padding-left: 65px;
+        padding-right: 65px;
+        padding-bottom: 12px;
+        padding-top: 12px;
+
+        @media screen and (max-width: $screen-sm) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    .botaosection1b {
+        border: 1px solid #d7d7d7;
+        border-radius: 16px;
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 12px;
+        padding-top: 12px;
+
+        @media screen and (max-width: $screen-sm) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    .ladobsection2 {
+        position: relative;
+        margin-top: 16px;
+        border: 0.88px solid transparent;
+        border-image: linear-gradient(168.82deg,
+                #fb37ff 1.7%,
+                rgba(155, 111, 238, 0) 27.12%,
+                rgba(123, 127, 234, 0) 61.28%,
+                #1bb2de 99.52%);
+        border-image-slice: 1;
+
+        .sombra1 {
+            position: absolute;
+
+            @media screen and (min-width: $screen-lg) {
+                top: -138px;
+                left: -82px;
+                background-color: rgba(251, 55, 255, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+
+            @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+                top: -138px;
+                left: -82px;
+                background-color: rgba(251, 55, 255, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+
+            @media screen and (min-width: $screen-sm) and (max-width: 1023px) {
+                top: -138px;
+                left: -82px;
+                background-color: rgba(251, 55, 255, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+
+            @media screen and (max-width: $screen-sm) {
+                top: -100px;
+                left: -28%;
+                background-color: rgba(251, 55, 255, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+        }
+
+        .sombra2 {
+            position: absolute;
+
+            @media screen and (min-width: $screen-lg) {
+                top: 75%;
+                left: 50%;
+                background-color: rgba(24, 178, 222, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+
+            @media screen and (min-width: $screen-md) and (max-width: 1279px) {
+                top: 70%;
+                left: 76%;
+                background-color: rgba(24, 178, 222, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+
+            @media screen and (min-width: $screen-sm) and (max-width: 1023px) {
+                top: 70%;
+                left: 60%;
+                background-color: rgba(24, 178, 222, 0.3);
+                filter: blur(40px);
+                padding-left: 182px;
+                padding-right: 66px;
+                padding-top: 200px;
+                padding-bottom: 76px;
+                border-radius: 50%;
+            }
+
+            @media screen and (max-width: $screen-sm) {
+                top: 70%;
+                left: 35%;
+                background-color: rgba(24, 178, 222, 0.3);
+                filter: blur(40px);
+                padding-left: 100px;
+                padding-right: 100px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                border-radius: 50%;
+            }
+        }
+
+        .img1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: $screen-sm) {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .laurasection1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 30px;
+            margin-right: 30px;
+
+            @media screen and (max-width: $screen-sm) {
+                align-items: flex-start;
+                margin-left: 12px;
+                margin-right: 13px;
+            }
+
+            @media screen and (min-width: $screen-sm) and (max-width: 1279px) {
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 90px;
+                margin-right: 90px;
+            }
+
+            .imglaura {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .fotolaura {
+                display: flex;
+                justify-content: center;
+
+                @media screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+                    margin-right: 180px;
+                }
+
+                @media screen and (max-width: $screen-sm) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.menusection2 {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 140px;
+
+    .viewall {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.buttondoscardscomimg {
+    background-color: $color-1;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+}
+
+.menusection4 {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 160px;
+}
+
+.menusection4a {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.buttonmenusection4 {
+    background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+    border-radius: 10px;
+    border: 1px solid $color-1;
+
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-lg) {}
+}
+
+.hr1 {
+    width: 100%;
+}
+
+.section3 {
+    margin-top: 160px;
+    position: relative;
+
+    .sombra3 {
+        position: absolute;
+
+        @media screen and (min-width: $screen-lg) {
+            top: 270px;
+            left: -10px;
+            background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+            border-radius: 10px;
+            filter: blur(50px);
+            padding-left: 600px;
+            padding-right: 600px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        @media screen and (min-width: $screen-md) and (max-width: 1279px) {
+            top: 270px;
+            left: -100px;
+            background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+            border-radius: 10px;
+            filter: blur(50px);
+            padding-left: 500px;
+            padding-right: 600px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        @media screen and (min-width: $screen-sm) and (max-width: 1023px) {
+            top: 270px;
+            left: 5%;
+            background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+            border-radius: 10px;
+            filter: blur(300px);
+            padding-left: 300px;
+            padding-right: 300px;
+            padding-top: 300px;
+            padding-bottom: 300px;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+            top: 290px;
+            left: 43%;
+            background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+            border-radius: 10px;
+            filter: blur(50px);
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 600px;
+            padding-bottom: 600px;
+        }
+    }
+
+    .cards4 {
+        background: rgba(255, 255, 255, 0.095);
+        box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17),
+            inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(74.4293px);
+        border-radius: 26px;
+    }
+}
+
+.buttonsection4 {
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    margin-top: 60px;
+}
+
+.footer {
+    @media screen and (min-width: $screen-lg) {
+        margin-top: 160px;
+    }
+
+    @media screen and (max-width: $screen-lg) {
+        margin-top: 100px;
+    }
+}

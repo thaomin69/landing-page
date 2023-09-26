@@ -1,0 +1,100 @@
+// Paleta de cores do site
+$color-lgray: #f5f5f5;
+$color-gray: #666;
+$color-dark: #333333;
+
+$color-success: #3ab572;
+$color-alert: #f0ac4a;
+$color-danger: #c23f3b;
+
+//cores do projeto
+$color-primary: #320b4a;
+$color-second: #bf4b55;
+
+$color-link: #bf4b55;
+
+// Importação de font do site
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Oswald:wght@300;400;500;700&display=swap");
+
+// Grid configurações
+$grid-gutter-width: 40px;
+$grid-columns: 12;
+
+$screen-sm: 650px;
+$screen-md: 1024px;
+$screen-lg: 1280px;
+
+$grid-container-max-size: 1280px;
+
+//configurações de fonte
+$font-display: "Oswald", sans-serif;
+$font-text: "Montserrat", sans-serif;
+$font-text1: "Poppins", sans-serif;
+//icons do Icomoon App
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-search: "\e903";
+$icon-arrow-down: "\e904";
+$icon-arrow-right: "\e906";
+$icon-facebook: "\e900";
+$icon-instagram: "\e901";
+$icon-youtube: "\e902";
+
+//cores da letras
+$color-letra1: #ffffff;
+$color-letra2: #bcbcbc;
+$color-letra3: #e2e2e2;
+//nao tem as cores degrade
+
+.colorletra-1 {
+    color: $color-letra1;
+}
+
+.colorletra-2 {
+    color: $color-letra2;
+}
+
+.colorletra-3 {
+    color: $color-letra3;
+}
+
+//cor degradê
+
+$color-1: #1f1d2b;
+$color-2: #ffffff18;
+$color-3: linear-gradient(103.91deg,
+        #9b51e0 21.01%,
+        rgba(48, 129, 237, 0.8) 100%);
+$color-4: #18b2de blur(200px);
+$color-5: #fb37ff blur(200px);
+$color-6: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%) blur(200px);
+$color-7: #bcbcbc;
+$color-8: #ffffff;
+$color-9: #e2e2e2;
+$color-10: #d7d7d7;
+$color-11: #828282;
+
+.colorletra1 {
+    color: $color-7;
+}
+
+.colorletra2 {
+    color: $color-8;
+}
+
+.colorletra3 {
+    color: $color-9;
+}
+
+.colorletra4 {
+    color: $color-10;
+}
+
+.colorletra5 {
+    color: $color-11;
+}
+
+.cor-fundo-site {
+    background-color: $color-1;
+}
