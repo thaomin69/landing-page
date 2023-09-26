@@ -1,42 +1,46 @@
-var gulp = require('gulp'),
-	sass =  require('gulp-sass')(require('sass'));
-	watch = require('gulp-watch'),
-	concat = require('gulp-concat'),
-	sourcemaps = require('gulp-sourcemaps'),
-	rename = require('gulp-rename'),
-    uglifyjs = require('gulp-uglify'),
-    lintjs = require('gulp-jshint'),
-    sassGlob = require('gulp-sass-glob');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const watch = require('gulp-watch');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const jshint = require('gulp-jshint');
+const sassGlob = require('gulp-sass-glob');
 
-var sassMainFile = 'src/styles/main.scss';
+const sassMainFile = 'src/styles/main.scss';
+const jsFiles = 'src/scripts/**/*.js';
 
-gulp.task('sass', done => {
-    gulp.src(sassMainFile)
+function compileSass(done) {
+    return gulp.src(sassMainFile)
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(concat('styles.css'))
-        .pipe(rename({suffix: ".min"}))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write())
-  		.pipe(gulp.dest('./dist'));
-        done();
-});
+        .pipe(gulp.dest('./dist'))
+        .on('end', done);
+}
 
-gulp.task('scripts', done => {
-    gulp.src('src/scripts/**/*.js')
+function processScripts(done) {
+    return gulp.src(jsFiles)
         .pipe(sourcemaps.init())
-        .pipe(lintjs())
+        .pipe(jshint())
         .pipe(sourcemaps.write())
-        .pipe(uglifyjs())
+        .pipe(uglify())
         .pipe(concat('scripts.js'))
-        .pipe(rename({suffix: ".min"}))
-        .pipe(gulp.dest('./dist'));
-        done();
-});
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./dist'))
+        .on('end', done);
+}
 
-gulp.task('watch', function () {
-    gulp.watch('src/styles/**/*', gulp.series('sass'));
-    gulp.watch('src/scripts/**/*', gulp.series('scripts'));
-});
+function watchFiles() {
+    gulp.watch('src/styles/**/*', gulp.series(compileSass));
+    gulp.watch('src/scripts/**/*', gulp.series(processScripts));
+}
 
-gulp.task('default', gulp.series('sass', 'scripts', 'watch'));
+exports.sass = compileSass;
+exports.scripts = processScripts;
+exports.watch = watchFiles;
+exports.default = gulp.series(compileSass, processScripts, watchFiles);
